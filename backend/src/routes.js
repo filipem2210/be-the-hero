@@ -20,7 +20,6 @@ routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
         email: Joi.string().required().email(),
-        //Estudar validação de telefones
         whatsapp: Joi.number().required(),
         city: Joi.string().required(),
         uf: Joi.string().required().length(2),
